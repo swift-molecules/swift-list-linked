@@ -1,5 +1,5 @@
 public import Buffer_Linked_Primitive
-public import List_Primitives
+public import List
 
 extension List where Element: ~Copyable {
 

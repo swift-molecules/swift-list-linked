@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "swift-list-linked-primitives",
+    name: "swift-list-linked",
     platforms: [
         .macOS(.v27),
         .iOS(.v27),
@@ -13,54 +13,54 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "List Linked Primitives",
-            targets: ["List Linked Primitives"]
+            name: "List Linked",
+            targets: ["List Linked"]
         ),
         .library(
             name: "List Linked Primitive",
             targets: ["List Linked Primitive"]
         ),
         .library(
-            name: "List Linked Primitives Test Support",
-            targets: ["List Linked Primitives Test Support"]
+            name: "List Linked Test Support",
+            targets: ["List Linked Test Support"]
         ),
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-primitives/swift-list-primitives.git",
+            url: "https://github.com/swift-molecules/swift-list.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-buffer-primitives.git",
+            url: "https://github.com/swift-molecules/swift-buffer.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-buffer-linked-primitives.git",
+            url: "https://github.com/swift-molecules/swift-buffer-linked.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-index-primitives.git",
+            url: "https://github.com/swift-molecules/swift-index.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-property-primitives.git",
+            url: "https://github.com/swift-molecules/swift-property.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-iterator-primitives.git",
+            url: "https://github.com/swift-molecules/swift-iterator.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-sequence-primitives.git",
+            url: "https://github.com/swift-molecules/swift-sequence.git",
             branch: "main"
         ),
 
         .package(
-            url: "https://github.com/swift-primitives/swift-storage-primitives.git",
+            url: "https://github.com/swift-molecules/swift-storage.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-memory-heap-primitives.git",
+            url: "https://github.com/swift-molecules/swift-memory-heap.git",
             branch: "main"
         ),
     ],
@@ -69,70 +69,70 @@ let package = Package(
         .target(
             name: "List Linked Primitive",
             dependencies: [
-                .product(name: "List Primitives", package: "swift-list-primitives"),
-                .product(name: "Index Primitives", package: "swift-index-primitives"),
+                .product(name: "List", package: "swift-list"),
+                .product(name: "Index", package: "swift-index"),
                 .product(
                     name: "Buffer Linked Primitive",
-                    package: "swift-buffer-linked-primitives"
+                    package: "swift-buffer-linked"
                 ),
                 .product(
-                    name: "Buffer Linked Primitives",
-                    package: "swift-buffer-linked-primitives"
+                    name: "Buffer Linked",
+                    package: "swift-buffer-linked"
                 ),
-                .product(name: "Iterator Primitive", package: "swift-iterator-primitives"),
-                .product(name: "Iterator Protocol", package: "swift-iterator-primitives"),
-                .product(name: "Iterable", package: "swift-iterator-primitives"),
-                .product(name: "Iterator Chunk Primitives", package: "swift-iterator-primitives"),
+                .product(name: "Iterator Primitive", package: "swift-iterator"),
+                .product(name: "Iterator Protocol", package: "swift-iterator"),
+                .product(name: "Iterable", package: "swift-iterator"),
+                .product(name: "Iterator Chunk", package: "swift-iterator"),
                 .product(
-                    name: "Storage Contiguous Primitives",
-                    package: "swift-storage-primitives"
+                    name: "Storage Contiguous",
+                    package: "swift-storage"
                 ),
-                .product(name: "Memory Heap Primitives", package: "swift-memory-heap-primitives"),
+                .product(name: "Memory Heap", package: "swift-memory-heap"),
             ]
         ),
 
         .target(
-            name: "List Linked Primitives",
+            name: "List Linked",
             dependencies: [
                 "List Linked Primitive",
-                .product(name: "List Primitives", package: "swift-list-primitives"),
-                .product(name: "Index Primitives", package: "swift-index-primitives"),
+                .product(name: "List", package: "swift-list"),
+                .product(name: "Index", package: "swift-index"),
                 .product(
                     name: "Buffer Linked Primitive",
-                    package: "swift-buffer-linked-primitives"
+                    package: "swift-buffer-linked"
                 ),
                 .product(
-                    name: "Buffer Linked Primitives",
-                    package: "swift-buffer-linked-primitives"
+                    name: "Buffer Linked",
+                    package: "swift-buffer-linked"
                 ),
-                .product(name: "Iterator Primitive", package: "swift-iterator-primitives"),
-                .product(name: "Iterator Protocol", package: "swift-iterator-primitives"),
-                .product(name: "Iterable", package: "swift-iterator-primitives"),
-                .product(name: "Iterator Chunk Primitives", package: "swift-iterator-primitives"),
-                .product(name: "Sequence Primitives", package: "swift-sequence-primitives"),
-                .product(name: "Property Primitives", package: "swift-property-primitives"),
+                .product(name: "Iterator Primitive", package: "swift-iterator"),
+                .product(name: "Iterator Protocol", package: "swift-iterator"),
+                .product(name: "Iterable", package: "swift-iterator"),
+                .product(name: "Iterator Chunk", package: "swift-iterator"),
+                .product(name: "Sequence", package: "swift-sequence"),
+                .product(name: "Property", package: "swift-property"),
             ]
         ),
 
         .target(
-            name: "List Linked Primitives Test Support",
+            name: "List Linked Test Support",
             dependencies: [
-                "List Linked Primitives",
+                "List Linked",
                 .product(
-                    name: "Buffer Primitives Test Support",
-                    package: "swift-buffer-primitives"
+                    name: "Buffer Test Support",
+                    package: "swift-buffer"
                 ),
-                .product(name: "Index Primitives Test Support", package: "swift-index-primitives"),
+                .product(name: "Index Test Support", package: "swift-index"),
             ],
             path: "Tests/Support"
         ),
 
         .testTarget(
-            name: "List Linked Primitives Tests",
+            name: "List Linked Tests",
             dependencies: [
-                "List Linked Primitives",
-                "List Linked Primitives Test Support",
-                .product(name: "Iterable", package: "swift-iterator-primitives"),
+                "List Linked",
+                "List Linked Test Support",
+                .product(name: "Iterable", package: "swift-iterator"),
             ]
         ),
     ],

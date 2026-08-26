@@ -1,5 +1,5 @@
 public import Buffer_Linked_Primitive
-public import Index_Primitives
+public import Index
 
 extension __ListLinked where Element: ~Copyable, S: ~Copyable {
 
@@ -9,12 +9,12 @@ extension __ListLinked where Element: ~Copyable, S: ~Copyable {
         @usableFromInline
         package var _buffer: Buffer<S>.Linked<N>
 
-        public let capacity: Index_Primitives.Index<Element>.Count
+        public let capacity: Index.Index<Element>.Count
 
         @inlinable
         package init(
             _buffer: consuming Buffer<S>.Linked<N>,
-            capacity: Index_Primitives.Index<Element>.Count
+            capacity: Index.Index<Element>.Count
         ) {
             self._buffer = _buffer
             self.capacity = capacity

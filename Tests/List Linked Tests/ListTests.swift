@@ -1,7 +1,7 @@
-import List_Linked_Primitives_Test_Support
+import List_Linked_Test_Support
 import Testing
 
-@testable import List_Linked_Primitives
+@testable import List_Linked
 
 @Suite
 struct `List.Linked Value Tests` {

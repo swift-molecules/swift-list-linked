@@ -1,7 +1,7 @@
-import List_Linked_Primitives_Test_Support
+import List_Linked_Test_Support
 import Testing
 
-@testable import List_Linked_Primitives
+@testable import List_Linked
 
 private struct SplitMix64 {
     var state: UInt64

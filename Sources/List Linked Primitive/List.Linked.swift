@@ -1,5 +1,5 @@
 public import Buffer_Linked_Primitive
-import Index_Primitives
+import Index
 
 @_documentation(visibility: public)
 @frozen

@@ -1,4 +1,4 @@
-# List Linked Primitives
+# List Linked
 
 ![Development Status](https://img.shields.io/badge/status-active--development-blue.svg)
 
@@ -12,7 +12,7 @@ doubly-linked) and supporting noncopyable (`~Copyable`) elements.
 ## Quick Start
 
 ```swift
-import List_Linked_Primitives
+import List_Linked
 
 // Value-semantic (copy-on-write), doubly-linked — O(1) prepend / append / pop from either end.
 var list = List<Int>.Value.Doubly()
@@ -57,7 +57,7 @@ try window.append(2)
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/swift-primitives/swift-list-linked-primitives.git", branch: "main")
+    .package(url: "https://github.com/swift-molecules/swift-list-linked.git", branch: "main")
 ]
 ```
 
@@ -66,9 +66,9 @@ dependencies: [
     name: "App",
     dependencies: [
         // The umbrella — types, operations, and conformances.
-        .product(name: "List Linked Primitives", package: "swift-list-linked-primitives"),
+        .product(name: "List Linked", package: "swift-list-linked"),
         // …or depend on just the type module, without the Copyable-gated conformances:
-        // .product(name: "List Linked Primitive", package: "swift-list-linked-primitives"),
+        // .product(name: "List Linked Primitive", package: "swift-list-linked"),
     ]
 )
 ```
@@ -109,10 +109,10 @@ the `Copyable`-gated conformances, kept separate so they never constrain noncopy
 | Product | Target | Purpose |
 |---------|--------|---------|
 | `List Linked Primitive` | `Sources/List Linked Primitive/` | The type surface: `List.Linked<S, N>`, its `Bounded` variant, per-column construction, the column typealiases, and the error type. |
-| `List Linked Primitives` | `Sources/List Linked Primitives/` | The umbrella — re-exports the type module and adds the seam-generic operations plus the `Equatable`, `Hashable`, and `Sequence` conformances (value-semantic column). |
-| `List Linked Primitives Test Support` | `Tests/Support/` | Re-exports the package for test consumers. |
+| `List Linked` | `Sources/List Linked/` | The umbrella — re-exports the type module and adds the seam-generic operations plus the `Equatable`, `Hashable`, and `Sequence` conformances (value-semantic column). |
+| `List Linked Test Support` | `Tests/Support/` | Re-exports the package for test consumers. |
 
-Built on the `List` namespace and `swift-buffer-linked-primitives`' `Buffer<S>.Linked<N>`
+Built on the `List` namespace and `swift-buffer-linked`' `Buffer<S>.Linked<N>`
 storage substrate. Foundation-free.
 
 ---
