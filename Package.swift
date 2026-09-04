@@ -60,7 +60,7 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-memory-heap.git",
+            url: "https://github.com/swift-atoms/swift-memory.git",
             branch: "main"
         ),
     ],
@@ -87,7 +87,7 @@ let package = Package(
                     name: "Storage Contiguous",
                     package: "swift-storage"
                 ),
-                .product(name: "Memory Heap", package: "swift-memory-heap"),
+                .product(name: "Memory", package: "swift-memory"),
             ]
         ),
 
