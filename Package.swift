@@ -80,9 +80,7 @@ let package = Package(
                     package: "swift-buffer-linked"
                 ),
                 .product(name: "Iterator Primitive", package: "swift-iterator"),
-                .product(name: "Iterator Protocol", package: "swift-iterator"),
-                .product(name: "Iterable", package: "swift-iterator"),
-                .product(name: "Iterator Chunk", package: "swift-iterator"),
+                .product(name: "Iterator", package: "swift-iterator"),
                 .product(
                     name: "Storage Contiguous",
                     package: "swift-storage"
@@ -106,9 +104,7 @@ let package = Package(
                     package: "swift-buffer-linked"
                 ),
                 .product(name: "Iterator Primitive", package: "swift-iterator"),
-                .product(name: "Iterator Protocol", package: "swift-iterator"),
-                .product(name: "Iterable", package: "swift-iterator"),
-                .product(name: "Iterator Chunk", package: "swift-iterator"),
+                .product(name: "Iterator", package: "swift-iterator"),
                 .product(name: "Sequence", package: "swift-sequence"),
                 .product(name: "Property", package: "swift-property"),
             ]
@@ -132,7 +128,7 @@ let package = Package(
             dependencies: [
                 "List Linked",
                 "List Linked Test Support",
-                .product(name: "Iterable", package: "swift-iterator"),
+                .product(name: "Iterator", package: "swift-iterator"),
             ]
         ),
     ],
