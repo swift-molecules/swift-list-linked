@@ -1,4 +1,3 @@
-# .github/metadata.yaml
 description: "Node-per-element linked-list discipline with O(1) prepend/append over move-only or copy-on-write storage columns, supporting noncopyable elements for Swift."
 topics:
   - molecules
