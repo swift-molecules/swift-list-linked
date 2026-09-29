@@ -9,12 +9,12 @@ extension __ListLinked where Element: ~Copyable, S: ~Copyable {
         @usableFromInline
         package var _buffer: Buffer<S>.Linked<N>
 
-        public let capacity: Index.Index<Element>.Count
+        public let capacity: Index::Index<Element>.Count
 
         @inlinable
         package init(
             _buffer: consuming Buffer<S>.Linked<N>,
-            capacity: Index.Index<Element>.Count
+            capacity: Index::Index<Element>.Count
         ) {
             self._buffer = _buffer
             self.capacity = capacity
