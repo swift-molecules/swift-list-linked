@@ -27,11 +27,11 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-molecules/swift-list.git",
+            url: "https://github.com/swift-atoms/swift-list.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-buffer.git",
+            url: "https://github.com/swift-atoms/swift-buffer.git",
             branch: "main"
         ),
         .package(
@@ -43,22 +43,21 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-property.git",
+            url: "https://github.com/swift-atoms/swift-property.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-iterator.git",
+            url: "https://github.com/swift-atoms/swift-iterator.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-sequence.git",
+            url: "https://github.com/swift-atoms/swift-sequence.git",
             branch: "main"
         ),
 
         .package(
-            url: "https://github.com/swift-molecules/swift-storage.git",
-            branch: "main"
-        ),
+            url: "https://github.com/swift-atoms/swift-storage.git",
+            branch: "main", traits: ["Generational"]),
         .package(
             url: "https://github.com/swift-atoms/swift-memory.git",
             branch: "main"
@@ -79,12 +78,8 @@ let package = Package(
                     name: "Buffer Linked",
                     package: "swift-buffer-linked"
                 ),
-                .product(name: "Iterator Primitive", package: "swift-iterator"),
                 .product(name: "Iterator", package: "swift-iterator"),
-                .product(
-                    name: "Storage Contiguous",
-                    package: "swift-storage"
-                ),
+                .product(name: "Storage", package: "swift-storage"),
                 .product(name: "Memory", package: "swift-memory"),
             ]
         ),
@@ -103,7 +98,6 @@ let package = Package(
                     name: "Buffer Linked",
                     package: "swift-buffer-linked"
                 ),
-                .product(name: "Iterator Primitive", package: "swift-iterator"),
                 .product(name: "Iterator", package: "swift-iterator"),
                 .product(name: "Sequence", package: "swift-sequence"),
                 .product(name: "Property", package: "swift-property"),
