@@ -1,5 +1,5 @@
 @_documentation(visibility: public)
-public enum __ListLinkedError: Swift.Error, Sendable, Equatable {
+public enum __ListLinkedError: Swift::Error, Sendable, Equatable {
 
     case invalidCapacity
 

@@ -77,12 +77,12 @@ where
     public func makeIterator() -> [Element].Iterator { _buffer.makeIterator() }
 }
 
-extension __ListLinked: Swift.Sequence
+extension __ListLinked: Swift::Sequence
 where
     S: Copyable, Element: Copyable, S: Store.Generational.`Protocol`, S.Element == Node<Element, N>
 {}
 
-extension __ListLinked.Bounded: Swift.Sequence
+extension __ListLinked.Bounded: Swift::Sequence
 where
     S: Copyable, Element: Copyable, S: Store.Generational.`Protocol`, S.Element == Node<Element, N>
 {}
