@@ -3,7 +3,10 @@ public import List_Linked_Primitive
 
 extension __ListLinked: Equatable
 where
-    S: Copyable, Element: Equatable, S: Store.Generational.`Protocol`, S.Element == Node<Element, N>
+    S: Copyable,
+    Element: Equatable,
+    S: Store.Generational.`Protocol`,
+    S.Element == Node<Element, N>
 {
 
     @inlinable
@@ -19,7 +22,10 @@ where
 
 extension __ListLinked: Hashable
 where
-    S: Copyable, Element: Hashable, S: Store.Generational.`Protocol`, S.Element == Node<Element, N>
+    S: Copyable,
+    Element: Hashable,
+    S: Store.Generational.`Protocol`,
+    S.Element == Node<Element, N>
 {
 
     @inlinable
@@ -32,7 +38,10 @@ where
 
 extension __ListLinked.Bounded: Equatable
 where
-    S: Copyable, Element: Equatable, S: Store.Generational.`Protocol`, S.Element == Node<Element, N>
+    S: Copyable,
+    Element: Equatable,
+    S: Store.Generational.`Protocol`,
+    S.Element == Node<Element, N>
 {
 
     @inlinable
@@ -48,7 +57,10 @@ where
 
 extension __ListLinked.Bounded: Hashable
 where
-    S: Copyable, Element: Hashable, S: Store.Generational.`Protocol`, S.Element == Node<Element, N>
+    S: Copyable,
+    Element: Hashable,
+    S: Store.Generational.`Protocol`,
+    S.Element == Node<Element, N>
 {
 
     @inlinable
@@ -61,7 +73,10 @@ where
 
 extension __ListLinked
 where
-    Element: Copyable, S: ~Copyable, S: Store.Generational.`Protocol`, S.Element == Node<Element, N>
+    Element: Copyable,
+    S: ~Copyable,
+    S: Store.Generational.`Protocol`,
+    S.Element == Node<Element, N>
 {
 
     @inlinable
@@ -70,7 +85,10 @@ where
 
 extension __ListLinked.Bounded
 where
-    Element: Copyable, S: ~Copyable, S: Store.Generational.`Protocol`, S.Element == Node<Element, N>
+    Element: Copyable,
+    S: ~Copyable,
+    S: Store.Generational.`Protocol`,
+    S.Element == Node<Element, N>
 {
 
     @inlinable
@@ -79,10 +97,16 @@ where
 
 extension __ListLinked: Swift::Sequence
 where
-    S: Copyable, Element: Copyable, S: Store.Generational.`Protocol`, S.Element == Node<Element, N>
+    S: Copyable,
+    Element: Copyable,
+    S: Store.Generational.`Protocol`,
+    S.Element == Node<Element, N>
 {}
 
 extension __ListLinked.Bounded: Swift::Sequence
 where
-    S: Copyable, Element: Copyable, S: Store.Generational.`Protocol`, S.Element == Node<Element, N>
+    S: Copyable,
+    Element: Copyable,
+    S: Store.Generational.`Protocol`,
+    S.Element == Node<Element, N>
 {}

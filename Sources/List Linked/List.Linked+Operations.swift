@@ -4,7 +4,9 @@ public import List_Linked_Primitive
 
 extension __ListLinked
 where
-    Element: ~Copyable, S: ~Copyable, S: Store.Generational.`Protocol`,
+    Element: ~Copyable,
+    S: ~Copyable,
+    S: Store.Generational.`Protocol`,
     S.Element == Node<Element, N>
 {
 
@@ -24,7 +26,9 @@ where
 
 extension __ListLinked
 where
-    Element: ~Copyable, S: ~Copyable, S: Store.Generational.`Protocol`,
+    Element: ~Copyable,
+    S: ~Copyable,
+    S: Store.Generational.`Protocol`,
     S.Element == Node<Element, N>
 {
 
@@ -59,7 +63,10 @@ where
 
 extension __ListLinked
 where
-    Element: Copyable, S: ~Copyable, S: Store.Generational.`Protocol`, S.Element == Node<Element, N>
+    Element: Copyable,
+    S: ~Copyable,
+    S: Store.Generational.`Protocol`,
+    S.Element == Node<Element, N>
 {
 
     @inlinable
@@ -108,7 +115,9 @@ where
 
 extension __ListLinked
 where
-    Element: ~Copyable, S: ~Copyable, S: Store.Generational.`Protocol`,
+    Element: ~Copyable,
+    S: ~Copyable,
+    S: Store.Generational.`Protocol`,
     S.Element == Node<Element, N>
 {
 
@@ -126,7 +135,9 @@ where
 
 extension __ListLinked
 where
-    Element: ~Copyable, S: ~Copyable, S: Store.Generational.`Protocol`,
+    Element: ~Copyable,
+    S: ~Copyable,
+    S: Store.Generational.`Protocol`,
     S.Element == Node<Element, N>
 {
 
@@ -148,7 +159,10 @@ where
 
 extension __ListLinked
 where
-    Element: Copyable, S: ~Copyable, S: Store.Generational.`Protocol`, S.Element == Node<Element, N>
+    Element: Copyable,
+    S: ~Copyable,
+    S: Store.Generational.`Protocol`,
+    S.Element == Node<Element, N>
 {
 
     @inlinable
